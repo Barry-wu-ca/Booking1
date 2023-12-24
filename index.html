@@ -3,17 +3,18 @@
 <head>
 <title>360 Panorama VR Image</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css"/>
 </head>
 <body>
 
-<div style="text-align: center;">
-  <h1>Explore This 360 Panorama</h1>
-  <p>Click and drag to explore the virtual scene.</p>
-  <img src="Popeyes.jpg" alt="360 Panorama VR Image" width="100%" height="auto" usemap="#image-map">
-</div>
+  <div id="panorama" style="width: 500px; height: 300px;"></div>
 
-<map name="image-map">
-  </map>
-
+  <script>
+      pannellum.viewer('panorama', {
+          "type": "equirectangular",
+          "panorama": "popeyes.jpg"
+      });
+  </script>
 </body>
 </html>
